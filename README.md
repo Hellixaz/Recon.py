@@ -15,7 +15,6 @@ After usage creates 3 different txt files in Outputs directory, which contains:
 
 ```
 chmod +x ./Installation.sh
-
 ```
 
 - Requirements Install
@@ -28,15 +27,11 @@ chmod +x ./Installation.sh
 ## Usage
 
 ```
-
 python3 Recon.py <domain>
-
 ```
 ## Usage example
 
 ```javascript
-
 python3 Recon.py example.com
-
 ```
 
