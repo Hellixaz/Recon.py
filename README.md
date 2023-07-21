@@ -35,7 +35,7 @@ python3 Recon.py <domain>
 ```
 ## Usage example
 
-```javascript
+```
 python3 Recon.py example.com
 ```
 
