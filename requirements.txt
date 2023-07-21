@@ -1,0 +1,7 @@
+---- List of Requirements ----
+
+1) Python (Recommend latest version, min 3.x)
+2) pip    (Installing tools and req.)
+3) tools  (TheHarvester, Naabu, Httpx)
+4) go     (Installation and tool usage)
+
