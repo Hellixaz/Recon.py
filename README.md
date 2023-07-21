@@ -4,9 +4,9 @@ Recon.py aims to automate asset discovery process. It is recommended to run as r
 
 After usage creates 3 different txt files, which contains:
 
--Subdomains.txt (Contain subdomains)
--IP.txt (Contain IP list)
--Ports.txt (Contain Ports)
+- Subdomains.txt (Contain subdomains)
+- IP.txt (Contain IP list)
+- Ports.txt (Contain Ports)
 
 
 
