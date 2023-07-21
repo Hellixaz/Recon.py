@@ -8,6 +8,10 @@ After usage creates 3 different txt files in Outputs directory, which contains:
 - IP.txt (Contain IP list)
 - Ports.txt (Contain Ports)
 
+## Requirements 
+
+- Please read requirements.txt. If you need Install and update any requirements check Installations step.
+
 
 ## Installations
 
