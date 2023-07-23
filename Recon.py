@@ -141,7 +141,7 @@ cikti = subprocess.check_output(move2, shell=True, stderr=subprocess.STDOUT, uni
 cikti = subprocess.check_output(move3, shell=True, stderr=subprocess.STDOUT, universal_newlines=True)
 
 
-
+##############################################################################################################
 
 
 
