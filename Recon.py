@@ -19,7 +19,7 @@ print("-----------------------------------------")
 komut5 = f"theHarvester -d {domain} -b anubis,baidu,bevigil,binaryedge,bing,bingapi,bufferoverun,brave,certspotter,criminalip,crtsh,dnsdumpster,duckduckgo,fullhunt,github-code,hackertarget,hunter,hunterhow,intelx,otx,pentesttools,projectdiscovery,rapiddns,rocketreach,securityTrails,sitedossier,subdomainfinderc99,threatminer,urlscan,virustotal,yahoo,zoomeye"  # domain değişkenini komut5 içinde kullanarak oluşturuyoruz
 
 
-# Komutu çalıştırma
+# Command Exec
 try:
     cikti = subprocess.check_output(komut5, shell=True, stderr=subprocess.STDOUT, universal_newlines=True)
     print("Çıktı:\n", cikti)
@@ -42,7 +42,7 @@ except subprocess.CalledProcessError as e:
     print("Hata mesajı:", e.output)
 time.sleep(3)
 #############################################################################################################
-#ÇIKTI DÜZENLEME
+#OUTPUT FIX
 
 output_file = 'Subdomains.txt'
 
@@ -75,7 +75,7 @@ print("-----------------------------------")
 print("Starting Naabu for Port Enumeration")
 print("-----------------------------------")
 
-# Komutu çalıştırma
+# Command Exec
 try:
     cikti = subprocess.check_output(naabu3, shell=True, stderr=subprocess.STDOUT, universal_newlines=True)
     print("Çıktı:\n", cikti)
