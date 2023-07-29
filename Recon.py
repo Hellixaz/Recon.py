@@ -6,7 +6,7 @@ import time
 try:
     domain = sys.argv[1]
 except IndexError:
-    print('Syntax Error - python3 Komutyazdırma.py <domain>')
+    print('Syntax Error - python3 Recon.py <domain>')
     sys.exit(1)
 
 ##########################################################################################################
@@ -16,30 +16,30 @@ print("-----------------------------------------")
 print("Starting subdomain enum with theHarvester")
 print("-----------------------------------------")
 
-komut5 = f"theHarvester -d {domain} -b anubis,baidu,bevigil,binaryedge,bing,bingapi,bufferoverun,brave,certspotter,criminalip,crtsh,dnsdumpster,duckduckgo,fullhunt,github-code,hackertarget,hunter,hunterhow,intelx,otx,pentesttools,projectdiscovery,rapiddns,rocketreach,securityTrails,sitedossier,subdomainfinderc99,threatminer,urlscan,virustotal,yahoo,zoomeye"  # domain değişkenini komut5 içinde kullanarak oluşturuyoruz
+harvester = f"theHarvester -d {domain} -b anubis,baidu,bevigil,binaryedge,bing,bingapi,bufferoverun,brave,certspotter,criminalip,crtsh,dnsdumpster,duckduckgo,fullhunt,github-code,hackertarget,hunter,hunterhow,intelx,otx,pentesttools,projectdiscovery,rapiddns,rocketreach,securityTrails,sitedossier,subdomainfinderc99,threatminer,urlscan,virustotal,yahoo,zoomeye"  # domain değişkenini komut5 içinde kullanarak oluşturuyoruz
 
 
 # Command Exec
 try:
-    cikti = subprocess.check_output(komut5, shell=True, stderr=subprocess.STDOUT, universal_newlines=True)
-    print("Çıktı:\n", cikti)
+    output = subprocess.check_output(harvester, shell=True, stderr=subprocess.STDOUT, universal_newlines=True)
+    print("Output:\n", output)
 except subprocess.CalledProcessError as e:
-    print("Hata oluştu. Hata kodu:", e.returncode)
-    print("Hata mesajı:", e.output)
+    print("Error. Code:", e.returncode)
+    print("Error Message:", e.output)
 time.sleep(3)
-# Komutu çalıştırma
+# Starting Command
 try:
-    cikti = subprocess.check_output(komut5, shell=True, stderr=subprocess.STDOUT, universal_newlines=True)
-    print("Çıktı:\n", cikti)
+    output = subprocess.check_output(harvester, shell=True, stderr=subprocess.STDOUT, universal_newlines=True)
+    print("Output:\n", output)
 
-    # Çıktıyı dosyaya kaydetme
+    # Save Output
     with open("harvester.txt", "w") as dosya:
-        dosya.write(cikti)
+        dosya.write(output)
     
 
 except subprocess.CalledProcessError as e:
-    print("Hata oluştu. Hata kodu:", e.returncode)
-    print("Hata mesajı:", e.output)
+    print("Error. Code:", e.returncode)
+    print("Error Message:", e.output)
 time.sleep(3)
 #############################################################################################################
 #OUTPUT FIX
@@ -61,7 +61,7 @@ for line in lines:
 with open(output_file, 'w') as file:
     file.writelines(output_lines)
 
-print('İşlem tamamlandı. Çıktı dosyası: ' + output_file)
+print('Process complete. Output file: ' + output_file)
 
 time.sleep(3)
 
@@ -77,11 +77,11 @@ print("-----------------------------------")
 
 # Command Exec
 try:
-    cikti = subprocess.check_output(naabu3, shell=True, stderr=subprocess.STDOUT, universal_newlines=True)
-    print("Çıktı:\n", cikti)
+    output = subprocess.check_output(naabu3, shell=True, stderr=subprocess.STDOUT, universal_newlines=True)
+    print("Output:\n", output)
 except subprocess.CalledProcessError as e:
-    print("Hata oluştu. Hata kodu:", e.returncode)
-    print("Hata mesajı:", e.output)
+    print("Error. Code:", e.returncode)
+    print("Error Message:", e.output)
     
 ##############################################################################################################
 
@@ -107,7 +107,7 @@ for line in lines:
 with open(output_file, 'w') as file:
     file.writelines(output_lines)
 
-print('İşlem tamamlandı. Çıktı dosyası: ' + output_file)
+print('Process Complete. Output File: ' + output_file)
 
     
     
@@ -116,7 +116,7 @@ print('İşlem tamamlandı. Çıktı dosyası: ' + output_file)
     
 ##############################################################################################################
 
-#HARVESTER FİLE DELETE
+#HARVESTER FILE DELETE
 
 delete= "rm harvester.txt"
 cikti = subprocess.check_output(delete, shell=True, stderr=subprocess.STDOUT, universal_newlines=True)
