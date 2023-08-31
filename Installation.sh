@@ -1,23 +1,23 @@
 #!/bin/bash
 
-printf "----- Installation Starts -----\n"
+echo "----- Installation Starts -----\n"
 
-printf "----- Installation Python -----\n"
+echo "----- Installation Python -----\n"
 
 apt-get install -y python3-pip
 apt-get install -y python-pip
 apt-get install -y dnspython
 
-printf "----- Installation pip -----\n"
+echo "----- Installation pip -----\n"
 
 apt install pip
 
-printf "----- Installation go -----\n"
+echo "----- Installation go -----\n"
 
 apt install -y gccgo-go
 apt install -y golang-go
 
-printf "----- Installation tools -----\n"
+echo "----- Installation tools -----\n"
 
 apt-get install theharvester
 
